@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    background: url('https://files.oaiusercontent.com/file-9QFscYJn5urgrfR2c8F7jf?se=2024-12-18T10%3A09%3A13Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D3b918993-1e10-4542-9a3c-e98f3e5c563a.webp&sig=rBTroTeVtzUDezplD8fWkmfJoE2MQZBJHacq4vUEiX4%3D') no-repeat center center/cover;
+    overflow: hidden;
+    object-fit:cover;
+}
+
+.parallax {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.parallax-text {
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-family: 'Cinzel Decorative', serif;
+    color: #fff;
+    display: inline-block;
+    
+}
+.highlight {
+    color: #e63946; 
+    font-weight: bold;
+    transition: color 0.3s ease; 
+    font-family: 'Cinzel Decorative', serif;
+}
+
+
+.section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    background: #2c2c2c;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fca311;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+section p, section ul {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+section ul {
+    list-style: none;
+}
+
+section ul li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+section ul li::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: #e63946;
+    font-size: 1.2rem;
+}
+
+.play-btn-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.play-btn {
+    background: linear-gradient(135deg, #e63946, #ff6f61);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.play-btn:hover {
+    background: linear-gradient(135deg, #d62828, #e63946);
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #1a1a1a;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.fade-in {
+    transform: translateY(20px);
+}
+
+.slide-in {
+    transform: translateX(-50px);
+}
+
+.zoom-in {
+    transform: scale(0.8);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
